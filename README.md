@@ -88,3 +88,19 @@ And join the Nx community:
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+
+# How this was created
+
+1. Used [Nx Docs](https://nx.dev/getting-started/installation) to create a new Nx Workspace with a PNPM as the package manager: `npx create-nx-workspace --pm pnpm`
+
+2. Publish the repo to Github.
+
+3. Follow the Nx Cloud link in the terminal output to connect the repo to an Nx Cloud organization.
+
+4. In Nx Cloud, on the "Settings/Access Control" page, change the "Default access level" to `none`, and the "Logged in users" access to `read-only`. This is so the only entity that can write to the remote cache is the CI process.
+
+5. Follow the [Nx Cloud Docs](https://nx.dev/ci/recipes/security/access-tokens?utm_source=nx.app) to create a CI Access Token for this repo.
+
+
+- login to Nx Cloud: `pnpx nx login`
