@@ -100,7 +100,12 @@ And join the Nx community:
 
 4. In Nx Cloud, on the "Settings/Access Control" page, change the "Default access level" to `none`, and the "Logged in users" access to `read-only`. This is so the only entity that can write to the remote cache is the CI process.
 
-5. Follow the [Nx Cloud Docs](https://nx.dev/ci/recipes/security/access-tokens?utm_source=nx.app) to create a CI Access Token for this repo.
+5. Follow the [Nx Cloud Docs](https://nx.dev/ci/recipes/security/access-tokens) to create a CI Access Token for this repo.
+
+6. Follow the [Nx Cloud Docs](https://nx.dev/ci/features/distribute-task-execution) enable distributed task execution.
+
+
+
 
 
 - login to Nx Cloud: `pnpx nx login`
