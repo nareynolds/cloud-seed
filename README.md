@@ -88,7 +88,7 @@ And join the Nx community:
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-# How this was created
+# How this repo was created
 
 1. Used [Nx Docs](https://nx.dev/getting-started/installation) to create a new Nx Workspace with a PNPM as the package manager: `npx create-nx-workspace --pm pnpm`
 
@@ -102,7 +102,7 @@ And join the Nx community:
 
 6. Follow the [Husky docs](https://typicode.github.io/husky/get-started.html) to install git hooks.
 
-7.
+7. Add the most strict rules provided by TS ESLint. [See docs](https://typescript-eslint.io/getting-started/typed-linting/).
 
 # TODO
 
