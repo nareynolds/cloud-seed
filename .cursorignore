@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+.nx/cache/
+
+# Large generated files
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
+
+# Binary and media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.mp4
+*.webm
+*.mp3
+*.wav
+
+# Pulumi state
+.pulumi/
+
+# Large JSON files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache directories
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+
+# Test coverage
+coverage/
+
+# Environment variables (for security)
+.env
+.env.*
+!.env.example
+
+# Cursor specific
+.cursor/cursor-chat/ 

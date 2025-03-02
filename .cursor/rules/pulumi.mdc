@@ -1,0 +1,43 @@
+---
+description: Pulumi Infrastructure as Code standards and best practices
+globs: 
+alwaysApply: false
+---
+ # Core Principles
+- Use TypeScript for infrastructure definition
+- Implement modular, reusable components
+- Follow least privilege principle for IAM
+- Tag all resources for cost tracking
+- Use stack references for cross-stack dependencies
+
+# Resource Standards
+- Group related resources into component classes
+- Implement consistent tagging strategy
+- Encrypt sensitive data using Pulumi secrets
+- Enable monitoring and logging by default
+- Maintain separate stacks for dev/staging/prod
+
+# Code Structure
+```typescript
+export class MyInfraComponent extends pulumi.ComponentResource {
+    public readonly resourceArn: pulumi.Output<string>;
+    
+    constructor(name: string, args: MyInfraComponentArgs, opts?: pulumi.ComponentResourceOptions) {
+        super('custom:MyInfra:Component', name, args, opts);
+        // Resource definition with error handling
+    }
+}
+```
+
+# Security Requirements
+- Use KMS for key management
+- Enable encryption at rest
+- Implement proper VPC design
+- Enable CloudWatch logging
+- Use IAM roles with minimal permissions
+
+# Documentation
+- Document component interfaces
+- Maintain stack-specific README files
+- Include configuration parameters
+- Document security considerations

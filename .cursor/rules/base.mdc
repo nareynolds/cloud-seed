@@ -1,0 +1,23 @@
+---
+description: Base project standards and architecture
+globs: **/*
+alwaysApply: true
+---
+# Project Overview
+This is a modern cloud development monorepo seed project that demonstrates best practices for:
+- AWS cloud development
+- Infrastructure as Code with Pulumi
+- Monorepo development with Nx
+- CI/CD with GitHub Actions and NxCloud
+
+# Core Principles
+- Follow clean code principles and consistent formatting
+- Maintain clear separation of concerns
+- Ensure proper error handling and logging
+- Write comprehensive tests for all components
+- Document architecture decisions and component usage
+
+# Development Workflow
+- Use feature branches and pull requests
+- Ensure CI passes before merging
+- Follow semantic versioning for releases
