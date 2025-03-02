@@ -1,7 +1,14 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "nrwl.angular-console",
+    "pulumi.pulumi-lsp-client",
+    "ms-azuretools.vscode-docker",
+    "amazonwebservices.aws-toolkit-vscode",
+    "github.vscode-github-actions",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "yzhang.markdown-all-in-one"
   ]
 }
