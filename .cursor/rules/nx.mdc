@@ -3,6 +3,7 @@ description: Nx monorepo standards and patterns
 globs: nx.json, workspace.json, package.json, tsconfig.json, tsconfig.*.json, apps/**/*, libs/**/*
 alwaysApply: false
 ---
+
 # Nx Monorepo Standards
 - Follow Nx recommended project structure
 - Use library boundaries to enforce separation of concerns
@@ -17,6 +18,6 @@ alwaysApply: false
 
 # Build and Test
 - Use Nx caching for faster builds
-- Configure distributed task execution with NxCloud
+- Configure distributed task execution with NxCloud 
 - Ensure all libraries have proper test coverage
 

@@ -3,7 +3,8 @@ description: Pulumi Infrastructure as Code standards and best practices
 globs: 
 alwaysApply: false
 ---
- # Core Principles
+
+# Core Principles
 - Use TypeScript for infrastructure definition
 - Implement modular, reusable components
 - Follow least privilege principle for IAM
@@ -40,4 +41,4 @@ export class MyInfraComponent extends pulumi.ComponentResource {
 - Document component interfaces
 - Maintain stack-specific README files
 - Include configuration parameters
-- Document security considerations
+- Document security considerations 

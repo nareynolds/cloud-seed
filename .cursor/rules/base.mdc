@@ -3,6 +3,7 @@ description: Base project standards and architecture
 globs: **/*
 alwaysApply: true
 ---
+
 # Project Overview
 This is a modern cloud development monorepo seed project that demonstrates best practices for:
 - AWS cloud development
