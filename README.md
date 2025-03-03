@@ -107,3 +107,7 @@ And join the Nx community:
 # TODO
 
 - TODO! Follow the [Nx Cloud Docs](https://nx.dev/ci/features/distribute-task-execution) enable distributed task execution.
+
+# Common Tasks
+
+- Create
