@@ -1,16 +1,8 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "outDir": "bin",
-    "target": "es2020",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "experimentalDecorators": true,
-    "pretty": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "files": ["index.ts"]
+  "extends": "../../tsconfig.base.json",
+  "references": [
+    {
+      "path": "./tsconfig.pulumi.json"
+    }
+  ]
 }

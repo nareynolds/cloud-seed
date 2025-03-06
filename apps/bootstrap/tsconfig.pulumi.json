@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.pulumi.json",
+  "files": ["index.ts"],
+  "compilerOptions": {
+    "outDir": "bin"
+  }
+}

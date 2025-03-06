@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./packages/example-util-a"
+    },
+    {
+      "path": "./apps/bootstrap"
     }
   ]
 }

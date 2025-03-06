@@ -112,10 +112,46 @@ And join the Nx community:
 
 - Create
 
-How to create Pulumi Projects
+# How to create Pulumi Projects
 
 - Create the project with the Pulumi CLI: `pulumi new aws-typescript`
-- Add TS Project reference to the tsconfig.json
+- Make sure the major version of `@types/node` matches the version pinned by Volta in the root package.json file.
+
+```
+{
+  //...
+  "devDependencies": {
+    "@types/node": "^20.17.0", //
+  }
+}
+
+```
+
+- Add `build` and `deploy` scripts to the package.json, and configure Nx dependency and cache strategy.
+
+```
+{
+  //...
+  "scripts": {
+    "build": "tsc --build",
+    "deploy": "pulumi up --stack dev --yes"
+  },
+  "nx": {
+    "targets": {
+      "deploy": {
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ]
+      }
+    }
+  }
+}
+```
+
+- Add an ESLint file to extend the base config.
+
+- Add TS Project reference to the root tsconfig.json to follow Nx best practices for TS modularity and performance
 
 ```
 {
@@ -128,3 +164,5 @@ How to create Pulumi Projects
   ]
 }
 ```
+
+- Refactor the Pulumi-generated tsconfig.json file to make use of the base files in the root. See [Managing TypeScript Packages in Monorepos](https://nx.dev/blog/managing-ts-packages-in-monorepos) and [A New Nx Experience for TypeScript Monorepos and Beyond](https://nx.dev/blog/new-nx-experience-for-typescript-monorepos) to better understand Nx's best practices for TS config.

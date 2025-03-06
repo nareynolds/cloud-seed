@@ -8,5 +8,6 @@ echo "All files formatted."
 pnpm pre-commit
 echo "All affected projects linted, tested, and built successfully."
 
-# add changes to this commit
+# TODO: only add changes if the files were formatted
+# add changes to this commit 
 git add .

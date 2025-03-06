@@ -1,13 +1,27 @@
 {
   "name": "bootstrap",
   "main": "index.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "deploy": "pulumi up --stack dev --yes"
+  },
   "devDependencies": {
-    "@types/node": "^18",
+    "@types/node": "^20.17.0",
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@pulumi/aws": "^6.0.0",
     "@pulumi/awsx": "^2.0.2",
     "@pulumi/pulumi": "^3.113.0"
+  },
+  "nx": {
+    "targets": {
+      "deploy": {
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ]
+      }
+    }
   }
 }
