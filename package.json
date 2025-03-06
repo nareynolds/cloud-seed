@@ -11,6 +11,7 @@
     "lint": "pnpx nx run-many --target=lint --all",
     "build": "pnpx nx run-many --target=build --all",
     "test": "pnpx nx run-many --target=test --all",
+    "pre-commit": "pnpx nx affected -t lint test build",
     "prepare": "husky"
   },
   "private": true,

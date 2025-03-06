@@ -111,3 +111,20 @@ And join the Nx community:
 # Common Tasks
 
 - Create
+
+How to create Pulumi Projects
+
+- Create the project with the Pulumi CLI: `pulumi new aws-typescript`
+- Add TS Project reference to the tsconfig.json
+
+```
+{
+  //...
+  "references": [
+    //...
+    {
+      "path": "./apps/{PROJECT_NAME}"
+    }
+  ]
+}
+```
