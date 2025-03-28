@@ -46,6 +46,7 @@ Pulumi.*.yaml
 # Cursor
 .cursor/settings.json
 .cursor/cursor-chat
+.cursor/mcp.json
 
 # Nx
 .nx/cache
