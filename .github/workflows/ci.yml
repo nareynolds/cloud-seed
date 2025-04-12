@@ -54,10 +54,10 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:personal
           scope: user:nareynolds
 
-      - name: Install and inject ESC environment variables
-        uses: pulumi/esc-action@v1
-        with:
-          environment: 'nareynolds/aws-oidc/admin-access'
+      # - name: Install and inject ESC environment variables
+      #   uses: pulumi/esc-action@v1
+      #   with:
+      #     environment: 'nareynolds/aws-oidc/admin-access'
 
       - uses: nrwl/nx-set-shas@v4
 
