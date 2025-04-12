@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/bootstrap"
+    },
+    {
+      "path": "./apps/pulumi-automation"
     }
   ]
 }

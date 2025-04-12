@@ -3,7 +3,11 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc --build",
-    "deploy": "pulumi up --stack dev --yes"
+    "pulumi-stack-select": "pulumi stack select dev",
+    "pulumi-refresh": "pulumi refresh -y",
+    "pulumi-up": "pulumi up -y",
+    "pulumi-up-via-api": "cd ../.. && npx nx run pulumi-automation:serve",
+    "deploy": "pulumi up -y"
   },
   "devDependencies": {
     "@types/node": "^20.17.0",
@@ -16,10 +20,17 @@
   },
   "nx": {
     "targets": {
+      "pulumi-refresh": {
+        "cache": true,
+        "dependsOn": [
+          "pulumi-stack-select"
+        ]
+      },
       "deploy": {
         "cache": true,
         "dependsOn": [
-          "build"
+          "build",
+          "pulumi-refresh"
         ]
       }
     }

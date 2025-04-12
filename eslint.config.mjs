@@ -6,7 +6,7 @@ export default [
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist'],
+    ignores: ['**/dist', '**/bin'],
   },
 
   // Add the most strict rules provided by TS ESLint https://typescript-eslint.io/getting-started/typed-linting/

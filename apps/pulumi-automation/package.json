@@ -1,0 +1,73 @@
+{
+  "name": "@cloud-seed/pulumi-automation",
+  "private": true,
+  "dependencies": {
+    "@pulumi/aws": "^6.0.0",
+    "@pulumi/pulumi": "^3.113.0",
+    "@types/node": "^22.13.14"
+  },
+  "nx": {
+    "name": "pulumi-automation",
+    "projectType": "application",
+    "sourceRoot": "apps/pulumi-automation/src",
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "platform": "node",
+          "outputPath": "apps/pulumi-automation/dist",
+          "format": [
+            "cjs"
+          ],
+          "bundle": false,
+          "main": "apps/pulumi-automation/src/main.ts",
+          "tsConfig": "apps/pulumi-automation/tsconfig.app.json",
+          "assets": [
+            "apps/pulumi-automation/src/assets"
+          ],
+          "esbuildOptions": {
+            "sourcemap": true,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        },
+        "configurations": {
+          "development": {},
+          "production": {
+            "esbuildOptions": {
+              "sourcemap": false,
+              "outExtension": {
+                ".js": ".js"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "production",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "pulumi-automation:build",
+          "runBuildTargetDependencies": false,
+          "watch": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "pulumi-automation:build:development"
+          },
+          "production": {
+            "buildTarget": "pulumi-automation:build:production"
+          }
+        }
+      }
+    }
+  }
+}

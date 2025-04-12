@@ -106,11 +106,14 @@ And join the Nx community:
 
 # TODO
 
-- TODO! Follow the [Nx Cloud Docs](https://nx.dev/ci/features/distribute-task-execution) enable distributed task execution.
+# Start developing
 
-# Common Tasks
-
-- Create
+- Auth with Github: `gh auth login`
+- Auth with NxCloud: `nx login`
+- Auth with Pulumi: `pulumi login`
+- Auth with Pulumi ESC: `esc login`
+- Auth with AWS: `aws sso login --sso-session my-sso`
+-
 
 # How to create Pulumi Projects
 
@@ -166,3 +169,12 @@ And join the Nx community:
 ```
 
 - Refactor the Pulumi-generated tsconfig.json file to make use of the base files in the root. See [Managing TypeScript Packages in Monorepos](https://nx.dev/blog/managing-ts-packages-in-monorepos) and [A New Nx Experience for TypeScript Monorepos and Beyond](https://nx.dev/blog/new-nx-experience-for-typescript-monorepos) to better understand Nx's best practices for TS config.
+
+# TODOs
+
+- Setup ESC to provide AWS creds for `nx deploy bootstrap`
+- Setup Github actions to get ESC creds, and move `pulumi up` to there.
+- Turn `nx deploy bootstrap` into Nx plugin command
+- Create method to auto-select the pulumi stack based on the git branch
+- Follow the [Nx Cloud Docs](https://nx.dev/ci/features/distribute-task-execution) enable distributed task execution.
+- Figure out how to limit the AWS Role used by ESC to auth with AWS
