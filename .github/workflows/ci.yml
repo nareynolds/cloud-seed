@@ -12,6 +12,7 @@ on:
 permissions:
   actions: read
   contents: read
+  id-token: write # This is required for requesting the JWT
 
 env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
