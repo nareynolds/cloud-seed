@@ -104,6 +104,10 @@ And join the Nx community:
 
 7. Add the most strict rules provided by TS ESLint. [See docs](https://typescript-eslint.io/getting-started/typed-linting/).
 
+8. Follow this [Pulumi doc](https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/) to configure OIDC between Pulumi and Github so Github Actions can access ESC.
+
+9. Follow this [Pulumi doc](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/) to set up ESC to generate dynamic AWS credentials for each Pulumi action.
+
 # TODO
 
 # Start developing
@@ -172,9 +176,16 @@ And join the Nx community:
 
 # TODOs
 
+- update Nx version
+- move CI's NX_CLOUD_ACCESS_TOKEN into Pulumi ESC
+- Include Pulumi Policy checking in CI/CD
 - Setup ESC to provide AWS creds for `nx deploy bootstrap`
 - Setup Github actions to get ESC creds, and move `pulumi up` to there.
 - Turn `nx deploy bootstrap` into Nx plugin command
 - Create method to auto-select the pulumi stack based on the git branch
 - Follow the [Nx Cloud Docs](https://nx.dev/ci/features/distribute-task-execution) enable distributed task execution.
 - Figure out how to limit the AWS Role used by ESC to auth with AWS
+
+# Considerations for New Org
+
+-
