@@ -41,7 +41,6 @@ yarn-error.log*
 
 # Pulumi
 .pulumi
-Pulumi.*.yaml
 
 # Cursor
 .cursor/settings.json

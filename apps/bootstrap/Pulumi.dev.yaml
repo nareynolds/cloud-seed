@@ -1,0 +1,4 @@
+environment:
+  - aws-oidc/admin-access
+config:
+  aws:region: us-east-1
